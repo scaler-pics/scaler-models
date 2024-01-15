@@ -5,6 +5,7 @@ export interface AddUploadedMbRequest {
 }
 export interface GetUploadedMbResponse {
 	uploadedMb: number;
+	monthlyQuota: number;
 	year: number;
 	month: number;
 }
