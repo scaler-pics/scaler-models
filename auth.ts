@@ -33,3 +33,9 @@ export interface SignupWithCodeRequest {
 	token: string;
 	code: string;
 }
+
+export interface SignupWithCodeResponse {
+	jwt: string;
+	email: string;
+	plan: string;
+}
