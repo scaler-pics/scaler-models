@@ -7,3 +7,8 @@ export interface CheckoutSessionRequest {
 export interface CheckoutSessionResponse {
 	sessionUrl: string;
 }
+
+export interface Subscription {
+	plan: string;
+	endDate: Date;
+}
