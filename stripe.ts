@@ -9,6 +9,7 @@ export interface CheckoutSessionResponse {
 }
 
 export interface Subscription {
+	stripeCustomerId: string;
 	plan: string;
 	endDate: Date;
 }
