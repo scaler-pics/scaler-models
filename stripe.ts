@@ -1,6 +1,9 @@
+export type BillingPeriod = 'monthly' | 'yearly';
+
 export interface CheckoutSessionRequest {
 	userId: string;
 	plan: string;
+	billingPeriod: BillingPeriod;
 	email: string;
 }
 
@@ -9,7 +12,6 @@ export interface CheckoutSessionResponse {
 }
 
 export interface Subscription {
-	stripeCustomerId: string;
 	plan: string;
 	endDate: Date;
 	lastUpdateDate: Date;
