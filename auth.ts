@@ -39,7 +39,6 @@ export interface SignupWithCodeRequest {
 
 export interface SignupWithCodeResponse {
 	jwt: string;
-	email: string;
 	plan: string;
 	billingPeriod: BillingPeriod;
 }
