@@ -1,5 +1,3 @@
-import { BillingPeriod } from './stripe';
-
 export interface JWTPayload {
 	sub: string;
 	exp: number;
@@ -29,7 +27,6 @@ export interface EmailSignupRequest {
 	name: string;
 	password: string;
 	plan: string;
-	billingPeriod: BillingPeriod;
 }
 
 export interface SignupWithCodeRequest {
@@ -40,5 +37,4 @@ export interface SignupWithCodeRequest {
 export interface SignupWithCodeResponse {
 	jwt: string;
 	plan: string;
-	billingPeriod: BillingPeriod;
 }
