@@ -9,8 +9,7 @@ export interface SessionResponse {
 
 export interface Subscription {
 	plan: string;
-	endDate: Date;
-	lastUpdateDate: Date;
+	status: string;
 }
 
 export interface PortalSessionRequest {
