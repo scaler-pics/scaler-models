@@ -37,5 +37,11 @@ export interface SubscriptionInfo {
 	trial_start: number | null;
 	trial_end: number | null;
 	plan: string | null;
-	product: string | null;
+}
+
+export interface ChangePlanRequest {
+	plan: string;
+}
+export interface ChangePlanResponse {
+	sessionUrl?: string;
 }
