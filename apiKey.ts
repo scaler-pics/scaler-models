@@ -29,3 +29,7 @@ export interface ApiKey {
 export interface GetApiKeysResponse {
 	keys: ApiKey[];
 }
+
+export interface CreateNewApiKeyRequest {
+	name: string;
+}
