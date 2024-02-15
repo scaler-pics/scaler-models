@@ -15,6 +15,7 @@ export interface DeleteApiKeyRequest {
 
 export interface NewApiKeyResponse {
 	id: number;
+	name: string;
 	apiKey: string;
 	date: string;
 }
