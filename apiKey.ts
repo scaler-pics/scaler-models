@@ -18,3 +18,13 @@ export interface NewApiKeyResponse {
 	apiKey: string;
 	date: string;
 }
+
+export interface ApiKey {
+	id: number;
+	name: string;
+	date: string;
+}
+
+export interface GetApiKeysResponse {
+	keys: ApiKey[];
+}
