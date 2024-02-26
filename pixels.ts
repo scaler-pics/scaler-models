@@ -24,3 +24,9 @@ export interface Size {
 	width: number;
 	height: number;
 }
+
+export interface GetPixelsResponse {
+	gigapixels: number;
+	monthId: string;
+	quota: number;
+}
