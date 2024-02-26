@@ -29,6 +29,7 @@ export interface GetPixelsResponse {
 	gigapixels: number;
 	monthId: string;
 	quota: number;
-	status: string;
-	statusUpdateDate: string;
+	plan?: string;
+	status?: string;
+	statusUpdateDate?: string;
 }
