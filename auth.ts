@@ -37,4 +37,5 @@ export interface SignupWithCodeRequest {
 export interface SignupWithCodeResponse {
 	jwt: string;
 	plan: string;
+	email?: string;
 }
