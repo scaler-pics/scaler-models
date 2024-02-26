@@ -7,11 +7,6 @@ export interface SessionResponse {
 	sessionUrl: string;
 }
 
-export interface Subscription {
-	plan: string;
-	status: string;
-}
-
 export interface PortalSessionRequest {
 	stripeCustomerId: string;
 }
