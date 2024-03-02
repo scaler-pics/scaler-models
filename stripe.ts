@@ -19,7 +19,6 @@ export type CustomerSubscriptionState =
 
 export interface SubscriptionInfoResponse {
 	state: CustomerSubscriptionState;
-	planName?: string;
 	subscription?: SubscriptionInfo;
 }
 
