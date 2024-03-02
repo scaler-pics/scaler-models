@@ -34,3 +34,7 @@ export interface GetPixelsResponse {
 	status?: string;
 	statusUpdateDate?: string;
 }
+
+export interface SetHardStopRequest {
+	hardStop: number | null;
+}
