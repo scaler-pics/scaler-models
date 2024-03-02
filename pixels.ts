@@ -30,6 +30,7 @@ export interface GetPixelsResponse {
 	monthId: string;
 	quota: number;
 	plan?: string;
+	hardStop?: number;
 	status?: string;
 	statusUpdateDate?: string;
 }
