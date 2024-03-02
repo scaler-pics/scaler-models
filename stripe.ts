@@ -1,6 +1,7 @@
+export type Plan = 'launch' | 'navigate' | 'soar';
 export interface CheckoutSessionRequest {
 	userId: string;
-	plan: string;
+	plan: Plan;
 	email?: string;
 }
 
@@ -19,7 +20,6 @@ export type CustomerSubscriptionState =
 
 export interface SubscriptionInfoResponse {
 	state: CustomerSubscriptionState;
-	planName?: string;
 	subscription?: SubscriptionInfo;
 }
 
@@ -36,7 +36,7 @@ export interface SubscriptionInfo {
 }
 
 export interface ChangePlanRequest {
-	plan: string;
+	plan: Plan;
 }
 export interface ChangePlanResponse {
 	sessionUrl?: string;
