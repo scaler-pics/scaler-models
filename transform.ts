@@ -28,11 +28,9 @@ export interface TransformUrlBody {
 	crop?: NormalizedCrop;
 }
 
-export type GetImageDataMethod = 'body' | 'url';
+export type SourceDataDeliveryMethod = 'body' | 'url';
 
 export interface Source {
-	method: GetImageDataMethod;
-	type: SourceImageType;
 	url?: string;
 }
 
