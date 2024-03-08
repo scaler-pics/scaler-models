@@ -24,6 +24,7 @@ export interface ApiKey {
 	id: number;
 	name: string;
 	date: string;
+	lastChars: string;
 }
 
 export interface GetApiKeysResponse {
