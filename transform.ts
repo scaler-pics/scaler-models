@@ -46,6 +46,11 @@ export interface SizeFit {
 	height: number;
 }
 
+export interface Size {
+	width: number;
+	height: number;
+}
+
 export interface Upload {
 	url: string;
 	method?: 'post' | 'put';
@@ -56,4 +61,20 @@ export interface NormalizedCrop {
 	top: number;
 	right: number;
 	bottom: number;
+}
+
+export interface TransfomrResponse {
+	sourceImage: SourceImage;
+	destinationImages: [DestinationImage];
+}
+
+export interface SourceImage {
+	pixelSize: Size;
+	byteSize: number;
+}
+
+export interface DestinationImage {
+	fit: SizeFit;
+	pixelSize: Size;
+	downloadUrl?: string;
 }
