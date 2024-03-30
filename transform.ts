@@ -35,15 +35,10 @@ export interface Source {
 }
 
 export interface Destination {
-	fit: SizeFit;
+	fit: Size;
 	type: DestinationImageType;
 	quality?: number;
 	upload?: Upload;
-}
-
-export interface SizeFit {
-	width: number;
-	height: number;
 }
 
 export interface Size {
@@ -63,7 +58,7 @@ export interface NormalizedCrop {
 	bottom: number;
 }
 
-export interface TransfomrResponse {
+export interface TransfomResponse {
 	sourceImage: SourceImage;
 	destinationImages: [DestinationImage];
 }
@@ -74,7 +69,7 @@ export interface SourceImage {
 }
 
 export interface DestinationImage {
-	fit: SizeFit;
+	fit: Size;
 	pixelSize: Size;
 	downloadUrl?: string;
 }
