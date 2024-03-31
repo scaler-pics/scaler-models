@@ -22,16 +22,12 @@ export const destinationImageTypes: DestinationImageType[] = [
 	'heic',
 ];
 
-export interface TransformUrlBody {
-	source: Source;
+type URLString = string;
+
+export interface TransformOptions {
+	source: 'body' | URLString;
 	destinations: Destination[];
 	crop?: NormalizedCrop;
-}
-
-export type SourceDataDeliveryMethod = 'body' | 'url';
-
-export interface Source {
-	url?: string;
 }
 
 export interface Destination {
