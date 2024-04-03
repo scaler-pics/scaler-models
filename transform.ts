@@ -44,7 +44,7 @@ export interface Size {
 
 export interface Upload {
 	url: string;
-	method?: 'post' | 'put';
+	method?: 'POST' | 'PUT';
 }
 
 export interface NormalizedCrop {
