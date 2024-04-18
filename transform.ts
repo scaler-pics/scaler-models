@@ -55,11 +55,11 @@ export interface NormalizedCrop {
 }
 
 export interface TransfomResponse {
-	sourceImage: SourceImage;
+	sourceImage: SourceImageInfo;
 	destinationImages: [DestinationImage];
 }
 
-export interface SourceImage {
+export interface SourceImageInfo {
 	pixelSize: Size;
 	byteSize: number;
 }
