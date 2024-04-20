@@ -57,6 +57,7 @@ export interface NormalizedCrop {
 export interface TransfomResponse {
 	sourceImage: SourceImageInfo;
 	destinationImages: [DestinationImage];
+	deleteUrl: string;
 }
 
 export interface SourceImageInfo {
@@ -68,4 +69,9 @@ export interface DestinationImage {
 	fit: Size;
 	pixelSize: Size;
 	downloadUrl?: string;
+	fileId?: string;
+}
+
+export interface ImageDeleteBody {
+	images: string[];
 }
