@@ -1,3 +1,5 @@
+import { Plan } from './stripe';
+
 export interface JWTPayload {
 	sub: string;
 	exp: number;
@@ -36,6 +38,6 @@ export interface SignupWithCodeRequest {
 
 export interface SignupWithCodeResponse {
 	jwt: string;
-	plan: string;
+	plan: Plan;
 	email?: string;
 }
