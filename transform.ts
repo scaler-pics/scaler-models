@@ -27,7 +27,6 @@ type URLString = string;
 export interface TransformOptions {
 	source: 'body' | URLString;
 	destinations: Destination[];
-	crop?: NormalizedCrop;
 }
 
 export interface Destination {
@@ -35,6 +34,7 @@ export interface Destination {
 	type: DestinationImageType;
 	quality?: number;
 	upload?: Upload;
+	crop?: NormalizedCrop;
 }
 
 export interface Size {
