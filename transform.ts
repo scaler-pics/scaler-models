@@ -58,6 +58,11 @@ export interface TransfomResponse {
 	sourceImage: SourceImageInfo;
 	destinationImages: [DestinationImage];
 	deleteUrl: string;
+	timeStats: {
+		getImageMs: number;
+		transformMs: number;
+		uploadImageMs?: number;
+	};
 }
 
 export interface SourceImageInfo {
