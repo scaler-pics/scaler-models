@@ -61,7 +61,7 @@ export interface TransfomResponse {
 	timeStats: {
 		getImageMs: number;
 		transformMs: number;
-		uploadImageMs?: number;
+		uploadImagesMs?: number;
 	};
 }
 
