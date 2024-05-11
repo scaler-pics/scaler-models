@@ -1,4 +1,4 @@
-export type SourceImageType =
+export type InputImageType =
 	| 'jpeg'
 	| 'png'
 	| 'webp'
@@ -6,8 +6,8 @@ export type SourceImageType =
 	| 'tiff'
 	| 'gif'
 	| 'bmp';
-export type DestinationImageType = 'jpeg' | 'png' | 'heic';
-export const sourceImageTypes: SourceImageType[] = [
+export type OutputImageType = 'jpeg' | 'png' | 'heic';
+export const inputImageTypes: InputImageType[] = [
 	'jpeg',
 	'png',
 	'webp',
@@ -16,22 +16,18 @@ export const sourceImageTypes: SourceImageType[] = [
 	'gif',
 	'bmp',
 ];
-export const destinationImageTypes: DestinationImageType[] = [
-	'jpeg',
-	'png',
-	'heic',
-];
+export const outputImageTypes: OutputImageType[] = ['jpeg', 'png', 'heic'];
 
 type URLString = string;
 
 export interface TransformOptions {
-	source: 'body' | URLString;
-	destinations: Destination[];
+	input: 'body' | URLString;
+	outputs: Output[];
 }
 
-export interface Destination {
+export interface Output {
 	fit: Size;
-	type: DestinationImageType;
+	type: OutputImageType;
 	quality?: number;
 	upload?: Upload;
 	crop?: NormalizedCrop;
@@ -55,8 +51,8 @@ export interface NormalizedCrop {
 }
 
 export interface TransfomResponse {
-	sourceImage: SourceImageInfo;
-	destinationImages: [DestinationImage];
+	inputImage: InputImageInfo;
+	outputImages: [OutputImage];
 	deleteUrl: string;
 	timeStats: {
 		transformMs: number;
@@ -64,12 +60,12 @@ export interface TransfomResponse {
 	};
 }
 
-export interface SourceImageInfo {
+export interface InputImageInfo {
 	pixelSize: Size;
 	byteSize: number;
 }
 
-export interface DestinationImage {
+export interface OutputImage {
 	fit: Size;
 	pixelSize: Size;
 	downloadUrl?: string;
