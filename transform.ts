@@ -26,7 +26,7 @@ export interface TransformOptions {
 }
 
 export interface Output {
-	fit: Size;
+	fit: Fit;
 	type: OutputImageType;
 	quality?: number;
 	upload?: Upload;
@@ -36,6 +36,12 @@ export interface Output {
 export interface Size {
 	width: number;
 	height: number;
+}
+
+export interface Fit {
+	width: number;
+	height: number;
+	upscale?: boolean;
 }
 
 export interface Upload {
@@ -66,7 +72,7 @@ export interface InputImageInfo {
 }
 
 export interface OutputImage {
-	fit: Size;
+	fit: Fit;
 	pixelSize: Size;
 	downloadUrl?: string;
 	fileId?: string;
