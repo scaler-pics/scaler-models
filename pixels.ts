@@ -1,23 +1,23 @@
-import { DestinationImageType, SourceImageType } from './transform';
+import { OutputImageType, InputImageType } from './transform';
 
 export interface AddUsageRequest {
 	userId: string;
 	pixels: number;
 	date: string;
-	source: SourceInfo;
-	destination: DestinationInfo[];
+	input: InputInfo;
+	output: OutputInfo[];
 }
 
-export interface SourceInfo {
-	type: SourceImageType;
+export interface InputInfo {
+	type: InputImageType;
 	sizeBytes: number;
 	sizePixels: Size;
 }
 
-export interface DestinationInfo {
+export interface OutputInfo {
 	width: number;
 	height: number;
-	type: DestinationImageType;
+	type: OutputImageType;
 }
 
 export interface Size {
