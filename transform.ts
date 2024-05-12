@@ -22,7 +22,7 @@ type URLString = string;
 
 export interface TransformOptions {
 	input: 'body' | URLString;
-	outputs: Output[];
+	output: Output[];
 }
 
 export interface Output {
