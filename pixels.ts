@@ -6,6 +6,7 @@ export interface AddUsageRequest {
 	date: string;
 	input: InputInfo;
 	output: OutputInfo[];
+	workerId: string;
 }
 
 export interface InputInfo {
