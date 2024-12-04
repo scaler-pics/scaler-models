@@ -1,27 +1,13 @@
-export type InputImageType =
-	| 'jpeg'
-	| 'png'
-	| 'webp'
-	| 'heic'
-	| 'tiff'
-	| 'gif'
-	| 'bmp';
+export type InputImageType = 'jpeg' | 'png' | 'webp' | 'heic' | 'tiff' | 'gif' | 'bmp';
 export type OutputImageType = 'jpeg' | 'png' | 'heic';
-export const inputImageTypes: InputImageType[] = [
-	'jpeg',
-	'png',
-	'webp',
-	'heic',
-	'tiff',
-	'gif',
-	'bmp',
-];
+export const inputImageTypes: InputImageType[] = ['jpeg', 'png', 'webp', 'heic', 'tiff', 'gif', 'bmp'];
 export const outputImageTypes: OutputImageType[] = ['jpeg', 'png', 'heic'];
 
 type URLString = string;
+type BodyFileString = `body:${string}`;
 
 export interface TransformOptions {
-	input: 'body' | URLString;
+	input: 'body' | BodyFileString | URLString;
 	output: Output[];
 }
 
